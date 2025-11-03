@@ -6,7 +6,7 @@
   "author": "iamkaizen <kimsokhom654@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "4"
+    "express": "^5.1.0"
   },
   "devDependencies": {
     "chai": "^6.2.0",
