@@ -31,3 +31,22 @@ jobs:
 
       - name: Run tests
         run: yarn test
+
+      - name: Run coverage
+        run: yarn coverage
+
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    steps:
+      - name: Trigger Render Deploy
+        run: curl -X POST "$RENDER_HOOK_URL"
+        env:
+          RENDER_HOOK_URL: ${{ secrets.RENDER_HOOK_URL }}
