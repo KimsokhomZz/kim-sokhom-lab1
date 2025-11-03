@@ -1,0 +1,23 @@
+{
+  "name": "kim-sokhom-lab1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/KimsokhomZz/kim-sokhom-lab1.git",
+  "author": "iamkaizen <kimsokhom654@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "chai": "^6.2.0",
+    "eslint": "^9.39.0",
+    "mocha": "^11.7.4",
+    "supertest": "^7.1.4"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha --exit",
+    "lint": "eslint . --ext .js"
+  },
+  "type": "module"
+}
